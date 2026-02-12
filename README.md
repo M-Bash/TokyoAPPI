@@ -1,3 +1,20 @@
+<div align="center">
+  <a href="https://github.com/M-Bash" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/mahamed-bashir" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+</div>
+
+<p align="center">
+  <br />
+  <b>Author:</b> Mahamed Bashir — Cloud Infrastructure Engineer
+</p>
+
+---
+
 # TokyoAPPI: Multi-Region Medical Cloud Architecture
 
 ![Build Status](https://img.shields.io/badge/Build-Passing-success?style=for-the-badge&logo=github)
