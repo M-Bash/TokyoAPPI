@@ -82,7 +82,7 @@ All compliance controls have been verified against the SEIR Foundations specific
 
 | Control | Mechanism | Status |
 | :--- | :--- | :--- |
-| **Data Residency** | Physical Isolation of RDS to Tokyo | ✅ **VERIFIED** |
-| **Network Integrity** | Private IP routing via TGW Corridor | ✅ **VERIFIED** |
-| **Edge Security** | WAF Attached & Origin Cloaked | ✅ **VERIFIED** |
-| **Global Access** | Active-Passive Origin Failover | ✅ **VERIFIED** |
+| **Data Residency** | Physical Isolation of RDS to Tokyo | ✅ **CONFIRMED** |
+| **Network Integrity** | Private IP routing via TGW Corridor | ✅ **CONFIRMED** |
+| **Edge Security** | WAF Attached & Origin Cloaked | ✅ **CONFIRMED** |
+| **Global Access** | Active-Passive Origin Failover | ✅ **CONFIRMED** |
