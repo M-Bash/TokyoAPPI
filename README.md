@@ -1,4 +1,4 @@
-# Project Armageddon: Multi-Region Medical Cloud Architecture
+# TokyoAPPI: Multi-Region Medical Cloud Architecture
 
 ![Build Status](https://img.shields.io/badge/Build-Passing-success?style=for-the-badge&logo=github)
 ![Terraform](https://img.shields.io/badge/IaC-Terraform_v1.5+-purple?style=for-the-badge&logo=terraform&logoColor=white)
@@ -6,7 +6,7 @@
 ![Compliance](https://img.shields.io/badge/Compliance-APPI_Strict-blue?style=for-the-badge)
 
 ## 1. Executive Summary
-**Project Armageddon** is a reference implementation of a medical-grade cloud infrastructure designed to satisfy strict **Data Residency (Japan APPI)** requirements while enabling global, low-latency access.
+**Project TokyoAPPI** is a reference implementation of a medical-grade cloud infrastructure designed to satisfy strict **Data Residency (Japan APPI)** requirements while enabling global, low-latency access.
 
 The architecture evolves from a single-region foundation into a complex **Hub-and-Spoke topology**, enforcing a unidirectional data dependency where the Tokyo Hub acts as the immutable "Data Authority" and the São Paulo Spoke operates as a stateless compute extension.
 
@@ -86,6 +86,3 @@ All compliance controls have been verified against the SEIR Foundations specific
 | **Network Integrity** | Private IP routing via TGW Corridor | ✅ **VERIFIED** |
 | **Edge Security** | WAF Attached & Origin Cloaked | ✅ **VERIFIED** |
 | **Global Access** | Active-Passive Origin Failover | ✅ **VERIFIED** |
-
-**Engineer:** Mahamed Bashir  
-**Submission Date:** February 9, 2026
