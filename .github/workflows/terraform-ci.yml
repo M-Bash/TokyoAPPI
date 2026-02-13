@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
 
       - name: Terraform Init (Backendless)
-        # --- THE FIX: ADD LAB3 PREFIX ---
+        # --- ADD LAB3 PREFIX ---
         run: |
           cd LAB3/env/tokyo
           terraform init -backend=false
