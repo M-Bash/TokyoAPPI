@@ -1,4 +1,4 @@
-![CI Status](https://img.shields.io/github/actions/workflow/status/M-Bash/TokyoAPPI/terraform-ci.yml?branch=main&style=for-the-badge&logo=github&label=Terraform%20CI)
+[![CI Status](https://github.com/M-Bash/TokyoAPPI/actions/workflows/terraform-ci.yml/badge.svg)](https://github.com/M-Bash/TokyoAPPI/actions)
 <div align="center">
   <a href="https://github.com/M-Bash" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
