@@ -24,26 +24,30 @@ jobs:
         with:
           terraform_version: 1.5.7
 
+      # DEBUG STEP: This helps us see exactly where the files are if it fails again
+      - name: Debug File Structure
+        run: ls -R
+
       - name: Terraform Format Check
         run: terraform fmt -check -recursive
-        continue-on-error: true # Don't fail the build, just warn
+        continue-on-error: true
 
       - name: Terraform Init (Backendless)
-        # We init without backend to check syntax without needing AWS creds
+        # --- THE FIX: ADD LAB3 PREFIX ---
         run: |
-          cd env/tokyo
+          cd LAB3/env/tokyo
           terraform init -backend=false
           cd ../saopaulo
           terraform init -backend=false
 
       - name: Terraform Validate (Tokyo)
         run: |
-          cd env/tokyo
+          cd LAB3/env/tokyo
           terraform validate
 
       - name: Terraform Validate (São Paulo)
         run: |
-          cd env/saopaulo
+          cd LAB3/env/saopaulo
           terraform validate
 
       - name: Run Trivy Vulnerability Scanner (IaC)
@@ -52,5 +56,5 @@ jobs:
           scan-type: 'config'
           hide-progress: false
           format: 'table'
-          exit-code: '0' # Don't fail build on findings, just report
+          exit-code: '0'
           severity: 'CRITICAL,HIGH'
