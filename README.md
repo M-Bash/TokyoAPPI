@@ -1,3 +1,5 @@
+![CI Status](https://github.com/M-Bash/TokyoAPPI/actions/workflows/terraform-ci.yml/badge.svg)
+
 <div align="center">
   <a href="https://github.com/M-Bash" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
