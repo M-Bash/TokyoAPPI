@@ -73,9 +73,9 @@ Audit evidence is generated using the Python scripts in `scripts/` and stored in
 2.  **Edge Caching:**
     ```bash
     # First Request (Miss)
-    curl -I https://lab3.couch2cloud.dev/static/test.js
+    curl -I https://YOUR_URL/static/test.js
     # Second Request (Hit)
-    curl -I https://lab3.couch2cloud.dev/static/test.js
+    curl -I https://YOUR_URL/static/test.js
     ```
 ## 5. Known Design Constraints
 *   **Write Operations:** To support CloudFront Origin Groups (which restrict mutation methods), write operations are handled via GET requests with query parameters (`/api/add?note=...`).
