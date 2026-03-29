@@ -24,7 +24,6 @@ jobs:
         with:
           terraform_version: 1.5.7
 
-      # DEBUG STEP: This helps us see exactly where the files are if it fails again
       - name: Debug File Structure
         run: ls -R
 
@@ -33,21 +32,20 @@ jobs:
         continue-on-error: true
 
       - name: Terraform Init (Backendless)
-        # --- ADD LAB3 PREFIX ---
         run: |
-          cd LAB3/env/tokyo
+          cd TokyoAPPI/env/tokyo
           terraform init -backend=false
           cd ../saopaulo
           terraform init -backend=false
 
       - name: Terraform Validate (Tokyo)
         run: |
-          cd LAB3/env/tokyo
+          cd TokyoAPPI/env/tokyo
           terraform validate
 
       - name: Terraform Validate (São Paulo)
         run: |
-          cd LAB3/env/saopaulo
+          cd TokyoAPPI/env/saopaulo
           terraform validate
 
       - name: Run Trivy Vulnerability Scanner (IaC)

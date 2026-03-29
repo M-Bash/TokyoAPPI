@@ -59,19 +59,19 @@ graph TD
 
 This project was executed in three distinct phases, mirroring the evolution of a production environment.
 
-### 🏛️ [Phase 1: Foundations & Identity](./LAB1/README.md)
+### 🏛️ [Phase 1: Foundations & Identity](./TokyoAPPI/README.md)
 **Objective:** Hardening the cloud perimeter and identity posture.
 *   **Zero-Trust Identity:** Eliminated long-lived credentials by implementing **IAM Instance Profiles** for all compute resources.
 *   **Secret Rotation:** Integrated **AWS Secrets Manager** for automated database credential rotation.
 *   **Observability:** Deployed custom CloudWatch metrics ("The Panic Button") to monitor application-to-database health.
 
-### 🛡️ [Phase 2: Edge Security & Cloaking](./LAB2/README.md)
+### 🛡️ [Phase 2: Edge Security & Cloaking](./TokyoAPPI/README.md)
 **Objective:** Establishing a "Double-Lock" perimeter defense.
 *   **Origin Cloaking:** Restricted Load Balancer ingress to the **CloudFront Managed Prefix List** (Layer 4) and enforced a custom **X-Origin-Secret** handshake (Layer 7).
 *   **Edge Defense:** Deployed **AWS WAFv2** with managed rule sets (SQLi, Common Threats) to scrub traffic before it hits the VPC.
 *   **Cache Strategy:** Implemented Origin-Driven Caching (`s-maxage`) to optimize content delivery while respecting data freshness.
 
-### 🌐 [Phase 3: Multi-Region Compliance](./LAB3/README.md)
+### 🌐 [Phase 3: Multi-Region Compliance](./TokyoAPPI/README.md)
 **Objective:** Enforcing Data Residency via Asymmetric Routing.
 *   **The "Legal Corridor":** Established a private **Transit Gateway (TGW) Peering** connection between `ap-northeast-1` and `sa-east-1`.
 *   **Stateless Enforcement:** Implemented conditional Terraform logic (`count = 0`) to physically prevent database creation in the Spoke region.

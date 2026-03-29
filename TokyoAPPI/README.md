@@ -1,4 +1,4 @@
-# Project Armageddon: APPI-Compliant Global Medical Architecture
+# TokyoAPPI-Compliant Global Medical Architecture
 
 ## 1. Architectural Overview
 This project implements a multi-region, hub-and-spoke architecture designed to meet strict Data Residency requirements (Japan APPI) while allowing global access with failover.
