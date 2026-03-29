@@ -24,31 +24,23 @@ jobs:
         with:
           terraform_version: 1.5.7
 
-      - name: Debug File Structure
-        run: ls -R
-
       - name: Terraform Format Check
         run: terraform fmt -check -recursive
         continue-on-error: true
 
-      - name: Terraform Init (Backendless)
+      - name: "Tokyo: Init & Validate"
+        working-directory: TokyoAPPI/env/tokyo
         run: |
-          cd TokyoAPPI/env/tokyo
           terraform init -backend=false
-          cd ../saopaulo
-          terraform init -backend=false
-
-      - name: Terraform Validate (Tokyo)
-        run: |
-          cd TokyoAPPI/env/tokyo
           terraform validate
 
-      - name: Terraform Validate (São Paulo)
+      - name: "São Paulo: Init & Validate"
+        working-directory: TokyoAPPI/env/saopaulo
         run: |
-          cd TokyoAPPI/env/saopaulo
+          terraform init -backend=false
           terraform validate
 
-      - name: Run Trivy Vulnerability Scanner (IaC)
+      - name: "Run Trivy Security Scan (IaC)"
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'config'
@@ -56,3 +48,6 @@ jobs:
           format: 'table'
           exit-code: '0'
           severity: 'CRITICAL,HIGH'
+
+      - name: Final Path Verification
+        run: ls -R TokyoAPPI/env/
